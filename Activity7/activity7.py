@@ -55,7 +55,7 @@ try:
         
         # Publish the data to the topic!
         print("Publish Temp:", temp_check)
-        temp_message=str(temp) #Change temperature to string
+        temp_message=str(temp_check) #Change temperature to string
         temp=temp_message.replace('C','') #Remove "C" Symbol
         mqtt_client.publish(temp_feed, temp) #Publish
         
